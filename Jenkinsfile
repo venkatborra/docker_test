@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage("verify tooling") {
             steps {
-                sh '''
+                bat '''
                     docker infor
                     docker version
                     docker compose version

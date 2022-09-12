@@ -4,8 +4,8 @@ pipeline {
         stage("verify tooling") {
             steps {
                 bat '''
-                    docker infor
                     docker version
+                    docker info
                     docker compose version
                     curl --version
                 '''

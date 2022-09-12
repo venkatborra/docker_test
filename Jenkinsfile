@@ -11,8 +11,8 @@ pipeline {
                 '''
             }
         }
-        stage('Start mongo db and mongo express containers') {
-            step {
+        stage("Start mongo db and mongo express containers") {
+            steps {
                 bat 'docker compose -f docker-compose.yaml up -d --no-color --wait'
                 bat 'docker compose ps'
             }
